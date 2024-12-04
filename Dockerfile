@@ -16,5 +16,5 @@ COPY main.py .
 
 FROM build AS deploy
 # Run the server
-EXPOSE 8080
-CMD ["uv", "run", "gunicorn main:app -k gevent --bind 0.0.0.0:8080"]
+EXPOSE 8000
+CMD ["uv", "run", "gunicorn","main:app","-k","gevent"]
